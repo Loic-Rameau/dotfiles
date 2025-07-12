@@ -1,8 +1,10 @@
 #!/bin/sh
 
 sudo pacman -S git \
+	base-devel \
+	stow \
+	nvidia-open \
 	core/openssh \
-	yay \
 	egl-wayland \
 	zsh \
 	nvim \
@@ -15,6 +17,13 @@ sudo pacman -S git \
 	dolphin \
 	hyprshot
 
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+makepckg -si
+cd ..
+rm -rf yay
+
 yay -S zen-browser-bin \
 	swaync \
 	pavucontrol \
@@ -26,10 +35,14 @@ yay -S zen-browser-bin \
 	kservice5 \
 	kvantum-git \
 	kvantum-qt5
-
-sudo pacman -S steam \
-	discord \
-	unzip
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 echo "Remove KMS from /etc/mkinitcpio.conf HOOKS list"
+echo "After enabling multilib in /etc/pacman.conf"
+echo "
+sudo pacman -S steam \
+	discord \
+	unzip
+"
+
