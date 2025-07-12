@@ -1,0 +1,39 @@
+[
+  {
+  "position": "top",
+  "output": ["DP-2"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["pulseaudio"],
+  "modules-center": ["clock"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%A %d %H:%M:%S}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 1
+  },
+  "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+   },
+   "sort-by-number": true
+  }
+},
+{
+  "position": "top",
+  "output": "HDMI-A-1",
+  "modules-left": ["hyprland/workspaces"]
+}
+]
