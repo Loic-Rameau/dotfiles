@@ -1,6 +1,7 @@
 #!/bin/sh
 
 sudo pacman -S git \
+	core/openssh \
 	yay \
 	egl-wayland \
 	zsh \
