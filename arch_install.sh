@@ -14,6 +14,7 @@ sudo pacman -S git \
 	wofi \
 	waybar \
 	ttf-font-awesome \
+	noto-fonts-emoji \
 	dolphin \
 	hyprshot
 
