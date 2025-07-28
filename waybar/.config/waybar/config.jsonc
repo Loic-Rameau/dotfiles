@@ -35,6 +35,12 @@
   "position": "top",
   "output": "HDMI-A-1",
   "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%A %d %H:%M:%S}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 1
+  },
   "hyprland/workspaces": {
      "format": "{icon}",
      "format-icons": {
