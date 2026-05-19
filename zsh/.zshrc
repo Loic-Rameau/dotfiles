@@ -22,3 +22,6 @@ function updateDiscord() {
   cd $CURRENT_DIR
 }
 
+function shutdown() {
+  hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
+}

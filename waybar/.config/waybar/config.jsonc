@@ -20,7 +20,7 @@
   },
   "hyprland/workspaces": {
     "format": "{icon}",
-    "on-click": "activate",
+    "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"{name}\" })'",
     "format-icons": {
       "1": "",
       "2": "",
@@ -43,6 +43,7 @@
   },
   "hyprland/workspaces": {
      "format": "{icon}",
+     "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"{name}\" })'",
      "format-icons": {
         "6": "",
         "7": "",
