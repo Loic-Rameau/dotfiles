@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo pacman -Syu
-sudo pacman -S git \
+sudo pacman -Sy --needed git \
 	base-devel \
 	stow \
 	nvidia-open \
@@ -16,7 +16,10 @@ sudo pacman -S git \
 	ttf-font-awesome \
 	noto-fonts-emoji \
 	dolphin \
-	hyprshot
+	hyprshot \
+	pipewire \
+	pipewire-pulse \
+	wireplumber
 
 git clone https://aur.archlinux.org/yay.git
 
@@ -35,7 +38,9 @@ yay -S zen-browser-bin \
 	ttf-cascadia-code-nerd \
 	kservice5 \
 	kvantum-git \
-	kvantum-qt5
+	kvantum-qt5 \
+	noctalia-shell
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
@@ -47,3 +52,7 @@ sudo pacman -S steam \
 	unzip
 "
 
+systemctl --user enable --now hypridle.service
+systemctl --user enable --now pipewire.service
+systemctl --user enable --now pipewire-pulse.service
+systemctl --user enable --now wireplumber.service
