@@ -78,7 +78,7 @@
                 "widgets": {
                     "center": [
                         {
-                            "characterCount": 1,
+                            "characterCount": 2,
                             "colorizeIcons": false,
                             "emptyColor": "secondary",
                             "enableScrollWheel": true,
@@ -100,8 +100,23 @@
                         }
                     ],
                     "left": [
+                        {
+                            "clockColor": "none",
+                            "customFont": "",
+                            "formatHorizontal": "HH:mm",
+                            "formatVertical": "HH mm - dd MM",
+                            "id": "Clock",
+                            "tooltipFormat": "HH:mm ddd, MMM dd",
+                            "useCustomFont": false
+                        }
                     ],
                     "right": [
+                        {
+                            "colorName": "tertiary",
+                            "hideWhenIdle": true,
+                            "id": "AudioVisualizer",
+                            "width": 200
+                        }
                     ]
                 }
             }
@@ -178,17 +193,6 @@
                     "usePadding": false
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "showText": true,
-                    "textColor": "none",
-                    "useFixedWidth": false
-                },
-                {
                     "compactMode": false,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
@@ -206,6 +210,11 @@
                 }
             ],
             "right": [
+                {
+                    "iconColor": "none",
+                    "id": "KeepAwake",
+                    "textColor": "none"
+                },
                 {
                     "blacklist": [
                     ],
@@ -226,26 +235,10 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "graphic-clean",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
-                },
-                {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "applyToAllMonitors": false,
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Brightness",
                     "textColor": "none"
                 },
                 {
