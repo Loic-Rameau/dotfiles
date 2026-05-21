@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo pacman -Syu
 sudo pacman -S git \
 	base-devel \
 	stow \
@@ -12,7 +13,6 @@ sudo pacman -S git \
 	hyprlan \
 	kitty \
 	wofi \
-	waybar \
 	ttf-font-awesome \
 	noto-fonts-emoji \
 	dolphin \
