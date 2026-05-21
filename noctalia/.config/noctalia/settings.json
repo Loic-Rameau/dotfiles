@@ -78,18 +78,18 @@
                 "widgets": {
                     "center": [
                         {
-                            "characterCount": 2,
+                            "characterCount": 1,
                             "colorizeIcons": false,
                             "emptyColor": "secondary",
                             "enableScrollWheel": true,
                             "focusedColor": "primary",
                             "followFocusedScreen": false,
-                            "fontWeight": "bold",
+                            "fontWeight": "regular",
                             "groupedBorderOpacity": 1,
                             "hideUnoccupied": false,
                             "iconScale": 0.8,
                             "id": "Workspace",
-                            "labelMode": "index",
+                            "labelMode": "name",
                             "occupiedColor": "secondary",
                             "pillSize": 0.6,
                             "showApplications": false,
@@ -114,21 +114,21 @@
         "widgets": {
             "center": [
                 {
-                    "characterCount": 2,
+                    "characterCount": 1,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
                     "followFocusedScreen": false,
-                    "fontWeight": "bold",
+                    "fontWeight": "regular",
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "name",
                     "occupiedColor": "secondary",
-                    "pillSize": 0.6,
-                    "showApplications": true,
+                    "pillSize": 0.8,
+                    "showApplications": false,
                     "showApplicationsHover": true,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
@@ -290,7 +290,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Rosepine",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -667,7 +667,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/irro/Pictures",
+        "directory": "/home/irro/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
