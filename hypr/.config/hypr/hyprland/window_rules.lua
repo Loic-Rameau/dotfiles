@@ -76,3 +76,10 @@ hl.window_rule({
   tag = "steam-game",
   content = "game"
 })
+
+hl.window_rule({
+  name = 'jetbrains',
+  match = {class = "^(jetbrains-.+)$"},
+  workspace = 3,
+  tag = 'development',
+})

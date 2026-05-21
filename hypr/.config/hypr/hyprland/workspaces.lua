@@ -5,7 +5,7 @@ for i = 1, 5 do
         workspace = i,
         monitor = 'DP-2',
         persistent = true,
-        default_name = workspaceLeft[i - 1]
+        default_name = workspaceLeft[i]
     })
 end
 
@@ -14,6 +14,6 @@ for i = 6, 7 do
     workspace = i,
     monitor = 'HDMI-A-1',
     persistent = true,
-    default_name = workspaceRight[i - 6]
+    default_name = workspaceRight[i - 5]
   })
 end
