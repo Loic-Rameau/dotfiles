@@ -1,5 +1,5 @@
-local workspaceLeft = {"", "", "", "", "󰺷"}
-local workspaceRight = {"", "",}
+local workspaceLeft = {" ", " ", " ", " ", "󰺷 "}
+local workspaceRight = {" ", " ",}
 for i = 1, 5 do
     hl.workspace_rule({
         workspace = i,

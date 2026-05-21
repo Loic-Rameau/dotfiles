@@ -114,7 +114,7 @@
         "widgets": {
             "center": [
                 {
-                    "characterCount": 1,
+                    "characterCount": 2,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
