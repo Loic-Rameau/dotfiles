@@ -1,6 +1,7 @@
+local ipc = "qs -c noctalia-shell ipc call "
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu        = "wofi --show drun"
+local menu        = ipc .. "launcher toggle"
 local mainMod     = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more

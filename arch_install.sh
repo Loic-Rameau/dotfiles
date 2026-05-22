@@ -12,7 +12,6 @@ sudo pacman -Sy --needed git \
 	nvidia-utils \
 	hyprlan \
 	kitty \
-	wofi \
 	ttf-font-awesome \
 	noto-fonts-emoji \
 	dolphin \
