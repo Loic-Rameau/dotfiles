@@ -1,15 +1,15 @@
-local workspaceLeft = {" ", " ", " ", " ", "󰺷 "}
-local workspaceRight = {" ", " ",}
+local workspaceLeft = { " ", " ", " ", " ", "󰺷 " }
+local workspaceRight = { " ", " ", }
 for i = 1, 5 do
-    hl.workspace_rule({
-        workspace = i,
-        monitor = 'DP-2',
-        persistent = true,
-        default_name = workspaceLeft[i]
-    })
+  hl.workspace_rule({
+    workspace = i,
+    monitor = 'DP-2',
+    persistent = true,
+    default_name = workspaceLeft[i]
+  })
 end
 
-for i = 6, 7 do
+for i = 6, 8 do
   hl.workspace_rule({
     workspace = i,
     monitor = 'HDMI-A-1',

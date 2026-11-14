@@ -1,7 +1,6 @@
-local ipc = "qs -c noctalia-shell ipc call "
+local ipc         = "noctalia msg "
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu        = ipc .. "launcher toggle"
 local mainMod     = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
@@ -11,11 +10,12 @@ hl.bind(mainMod .. " + M",
   hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))  -- dwindle only
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))                -- dwindle only
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. "lockscreen-toggle")) -- dwindle only
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))

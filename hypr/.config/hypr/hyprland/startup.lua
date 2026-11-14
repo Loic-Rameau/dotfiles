@@ -1,3 +1,3 @@
 hl.on("hyprland.start", function()
-  hl.exec_cmd("qs -c noctalia-shell & waync & hyprpaper")
+  hl.exec_cmd("noctalia & waync & hyprpaper")
 end)
