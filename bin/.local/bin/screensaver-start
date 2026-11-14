@@ -1,0 +1,9 @@
+#!/bin/bash
+orig=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
+
+for mon in $(hyprctl monitors -j | jq -r '.[].name'); do
+  hyprctl dispatch focusmonitor "$mon"
+  hyprctl dispatch exec "[float; fullscreen; noanim] alacritty --class screensaver -e cmatrix -s"
+done
+
+hyprctl dispatch focusmonitor "$orig"
