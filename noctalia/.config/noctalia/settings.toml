@@ -11,6 +11,7 @@ enabled = true
 
 [idle.behavior.screensaver]
 timeout = 300
-command = "kitty --start-as=fullscreen -e cmatrix -s"
-resume_command = "pkill cmatrix"
+command = "screensaver-start"
+resume_command = "pkill -f 'class screensaver'"
 enabled = true
+
