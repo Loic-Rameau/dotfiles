@@ -1,9 +1,10 @@
 #!/bin/bash
+# ~/.local/bin/screensaver-start
 orig=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
 
 for mon in $(hyprctl monitors -j | jq -r '.[].name'); do
-  hyprctl dispatch focusmonitor "$mon"
-  hyprctl dispatch exec "[float; fullscreen; noanim] alacritty --class screensaver -e cmatrix -s"
+  hyprctl dispatch "hl.dsp.focus({ monitor = \"$mon\" })"
+  hyprctl dispatch 'hl.dsp.exec_cmd("kitty --class screensaver -e cmatrix -s", { float = true, fullscreen = true })'
 done
 
-hyprctl dispatch focusmonitor "$orig"
+hyprctl dispatch "hl.dsp.focus({ monitor = \"$orig\" })"
